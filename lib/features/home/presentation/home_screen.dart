@@ -16,7 +16,10 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: CircleAvatar(
             backgroundColor: AppTheme.primaryColor.withValues(alpha: 0.1),
-            child: const Icon(Icons.account_balance_wallet_outlined, color: AppTheme.primaryColor),
+            child: const Icon(
+              Icons.account_balance_wallet_outlined,
+              color: AppTheme.primaryColor,
+            ),
           ),
         ),
         title: Column(
@@ -44,7 +47,10 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {},
             icon: Stack(
               children: [
-                const Icon(Icons.notifications_outlined, color: Color(0xFF111827)),
+                const Icon(
+                  Icons.notifications_outlined,
+                  color: Color(0xFF111827),
+                ),
                 Positioned(
                   right: 0,
                   top: 0,
@@ -110,7 +116,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                   TextButton.icon(
                     onPressed: () => context.push('/add-card'),
-                    icon: const Icon(Icons.add_circle_outline, size: 16, color: AppTheme.primaryColor),
+                    icon: const Icon(
+                      Icons.add_circle_outline,
+                      size: 16,
+                      color: AppTheme.primaryColor,
+                    ),
                     label: Text(
                       "Qo'shish",
                       style: GoogleFonts.inter(
@@ -133,7 +143,7 @@ class HomeScreen extends StatelessWidget {
                   BankCardWidget(
                     balance: '12,450,000 UZS',
                     cardNumber: '**** **** **** 4582',
-                    ownerName: 'AZIZBEK TOHIROV',
+                    ownerName: 'ABDUKARIM ZIYODULLAYEV',
                     gradient: LinearGradient(
                       colors: [Color(0xFF2563EB), Color(0xFF4338CA)],
                     ),
@@ -142,7 +152,7 @@ class HomeScreen extends StatelessWidget {
                   BankCardWidget(
                     balance: '850,000 UZS',
                     cardNumber: '**** **** **** 9012',
-                    ownerName: 'AZIZBEK TOHIROV',
+                    ownerName: 'ABDUKARIM ZIYODULLAYEV',
                     gradient: LinearGradient(
                       colors: [Color(0xFF10B981), Color(0xFF0F766E)],
                     ),
@@ -158,10 +168,26 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                  QuickActionWidget(icon: Icons.swap_horiz, label: "O'tkazmalar", color: Color(0xFFEFF6FF)),
-                  QuickActionWidget(icon: Icons.qr_code_scanner, label: "To'lov", color: Color(0xFFF0FDF4)),
-                  QuickActionWidget(icon: Icons.history, label: "Tarix", color: Color(0xFFFAF5FF)),
-                  QuickActionWidget(icon: Icons.more_horiz, label: "Ko'proq", color: Color(0xFFFFF7ED)),
+                  QuickActionWidget(
+                    icon: Icons.swap_horiz,
+                    label: "O'tkazmalar",
+                    color: Color(0xFFEFF6FF),
+                  ),
+                  QuickActionWidget(
+                    icon: Icons.qr_code_scanner,
+                    label: "To'lov",
+                    color: Color(0xFFF0FDF4),
+                  ),
+                  QuickActionWidget(
+                    icon: Icons.history,
+                    label: "Tarix",
+                    color: Color(0xFFFAF5FF),
+                  ),
+                  QuickActionWidget(
+                    icon: Icons.more_horiz,
+                    label: "Ko'proq",
+                    color: Color(0xFFFFF7ED),
+                  ),
                 ],
               ),
             ),
@@ -236,15 +262,24 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 8),
                                 Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 2,
+                                  ),
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFF10B981).withValues(alpha: 0.1),
+                                    color: const Color(
+                                      0xFF10B981,
+                                    ).withValues(alpha: 0.1),
                                     borderRadius: BorderRadius.circular(9999),
                                   ),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      const Icon(Icons.trending_up, size: 12, color: Color(0xFF10B981)),
+                                      const Icon(
+                                        Icons.trending_up,
+                                        size: 12,
+                                        color: Color(0xFF10B981),
+                                      ),
                                       const SizedBox(width: 4),
                                       Text(
                                         '+12.5%',
@@ -279,9 +314,31 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: 24),
                         const Divider(color: Color(0xFFF3F4F6)),
                         const SizedBox(height: 16),
-                        _buildAssetItem(Icons.currency_bitcoin, "Kriptovalyuta", "BTC, ETH", "\$1,240.00", "+5.2%", Colors.orange),
-                        _buildAssetItem(Icons.show_chart, "Aksiyalar", "Apple, Tesla", "\$2,450.50", "+8.4%", Colors.blue),
-                        _buildAssetItem(Icons.toll, "Oltin", "MyGold xizmati", "\$560.30", "-1.2%", Colors.yellow.shade700, isPositive: false),
+                        _buildAssetItem(
+                          Icons.currency_bitcoin,
+                          "Kriptovalyuta",
+                          "BTC, ETH",
+                          "\$1,240.00",
+                          "+5.2%",
+                          Colors.orange,
+                        ),
+                        _buildAssetItem(
+                          Icons.show_chart,
+                          "Aksiyalar",
+                          "Apple, Tesla",
+                          "\$2,450.50",
+                          "+8.4%",
+                          Colors.blue,
+                        ),
+                        _buildAssetItem(
+                          Icons.toll,
+                          "Oltin",
+                          "MyGold xizmati",
+                          "\$560.30",
+                          "-1.2%",
+                          Colors.yellow.shade700,
+                          isPositive: false,
+                        ),
                       ],
                     ),
                   ),
@@ -300,13 +357,23 @@ class HomeScreen extends StatelessWidget {
       width: 12,
       height: height,
       decoration: BoxDecoration(
-        color: isPrimary ? AppTheme.primaryColor : AppTheme.primaryColor.withValues(alpha: opacity),
+        color: isPrimary
+            ? AppTheme.primaryColor
+            : AppTheme.primaryColor.withValues(alpha: opacity),
         borderRadius: const BorderRadius.vertical(top: Radius.circular(2)),
       ),
     );
   }
 
-  Widget _buildAssetItem(IconData icon, String title, String subtitle, String amount, String percent, Color iconColor, {bool isPositive = true}) {
+  Widget _buildAssetItem(
+    IconData icon,
+    String title,
+    String subtitle,
+    String amount,
+    String percent,
+    Color iconColor, {
+    bool isPositive = true,
+  }) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: Row(
@@ -329,11 +396,18 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w600, color: const Color(0xFF111827)),
+                    style: GoogleFonts.inter(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF111827),
+                    ),
                   ),
                   Text(
                     subtitle,
-                    style: GoogleFonts.inter(fontSize: 12, color: const Color(0xFF6B7280)),
+                    style: GoogleFonts.inter(
+                      fontSize: 12,
+                      color: const Color(0xFF6B7280),
+                    ),
                   ),
                 ],
               ),
@@ -344,14 +418,20 @@ class HomeScreen extends StatelessWidget {
             children: [
               Text(
                 amount,
-                style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.bold, color: const Color(0xFF111827)),
+                style: GoogleFonts.inter(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF111827),
+                ),
               ),
               Text(
                 percent,
                 style: GoogleFonts.inter(
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
-                  color: isPositive ? const Color(0xFF10B981) : const Color(0xFFEF4444),
+                  color: isPositive
+                      ? const Color(0xFF10B981)
+                      : const Color(0xFFEF4444),
                 ),
               ),
             ],
@@ -421,12 +501,19 @@ class BankCardWidget extends StatelessWidget {
                     children: [
                       Text(
                         'Joriy balans',
-                        style: GoogleFonts.inter(fontSize: 12, color: Colors.white.withValues(alpha: 0.8)),
+                        style: GoogleFonts.inter(
+                          fontSize: 12,
+                          color: Colors.white.withValues(alpha: 0.8),
+                        ),
                       ),
                       const SizedBox(height: 4),
                       Text(
                         balance,
-                        style: GoogleFonts.inter(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+                        style: GoogleFonts.inter(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
@@ -453,17 +540,30 @@ class BankCardWidget extends StatelessWidget {
                         children: [
                           Text(
                             'Egasi',
-                            style: GoogleFonts.inter(fontSize: 10, color: Colors.white.withValues(alpha: 0.7), fontWeight: FontWeight.w400),
+                            style: GoogleFonts.inter(
+                              fontSize: 10,
+                              color: Colors.white.withValues(alpha: 0.7),
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                           Text(
                             ownerName,
-                            style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white),
+                            style: GoogleFonts.inter(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                            ),
                           ),
                         ],
                       ),
                       Text(
                         cardType,
-                        style: GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white, letterSpacing: -0.9),
+                        style: GoogleFonts.inter(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          letterSpacing: -0.9,
+                        ),
                       ),
                     ],
                   ),
@@ -505,7 +605,11 @@ class QuickActionWidget extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           label,
-          style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w500, color: const Color(0xFF6B7280)),
+          style: GoogleFonts.inter(
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+            color: const Color(0xFF6B7280),
+          ),
         ),
       ],
     );
